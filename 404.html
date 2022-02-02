@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        //将html标签替换，实现转发功能
+        var html = document.getElementsByTagName('html')[0]
+        var request = new XMLHttpRequest
+        request.open('GET', 'https://zcteo.top/404.html', false)
+        request.send()
+        html.innerHTML = request.responseText
+    </script>
+</head>
+
+</html>
