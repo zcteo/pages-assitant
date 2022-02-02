@@ -1,0 +1,16 @@
+name: update-img
+on:
+  # push:
+  #   branches:
+  #     - master
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  update-img:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - run: chmod +x update_img.sh
+      - run: chmod +x commit.sh
+      - run: ./update_img.sh
+      - run: ./commit.sh
