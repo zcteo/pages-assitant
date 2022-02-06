@@ -1,6 +1,6 @@
 name: update-img
 on:
-  push:
+  # push:
   #   branches:
   #     - master
   schedule:
