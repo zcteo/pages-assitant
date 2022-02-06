@@ -1,10 +1,10 @@
 name: update-img
 on:
-  # push:
+  push:
   #   branches:
   #     - master
   schedule:
-    - cron: '0 16 * * *'
+    - cron: '0 18 * * *'
 jobs:
   update-img:
     runs-on: ubuntu-latest
