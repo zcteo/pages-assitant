@@ -1,6 +1,12 @@
 #!/bin/bash
 
-mv img.jpg "bing-imgs/$(cat enddate).jpg"
+enddate=$(cat enddate)
+
+dir="bing-imgs/${enddate:0:4}/${enddate:4:2}/"
+
+mkdir -p "$dir"
+
+mv img.jpg "$dir/${enddate}.jpg"
 
 json=$(curl 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1')
 
